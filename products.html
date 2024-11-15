@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+         @media screen and (min-width: 500px) {
+        #clothes {
+            transform: translate(0%, -200px);
+        }
+        .fashion {
+            opacity: 0;
+        }
+    }
+    html {
+        overflow-x: hidden;
+    }
+        body {
+            padding: 0;
+            max-width: 1000px;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+            border-top: none;
+            margin: 0 auto;
+        }
+        header {
+            color: rgb(0, 0, 0);
+            height: 100vh;
+            background-image: url(baaack.webp);
+            margin: 0;
+            overflow: hidden;
+            border-bottom: solid 4px #000000;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: flex;
+            width: 100%;
+            transform: translateX(-50px);
+            justify-content: space-evenly;
+        }
+        nav ul li {
+            list-style: none;
+            font-weight: 750;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            position: relative;        
+        }
+        nav ul li::after {
+            position: absolute;
+            content: "";
+            width: 70%; 
+            background-color: #ffffff;
+            height: 4px;
+            top: 100%;
+            left: 0;
+            transition: all .4;
+            border-radius: 20px;
+        }
+        header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+            animation: came2 1s;
+            font-size: 55px;
+            font-weight: 750;
+        }
+        header p {
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 900;
+            color: gray;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .products {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .product {
+            border: solid 1px black;
+            width: 80%;
+            margin: 100px auto;
+            max-width: 400px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .product .price {
+            font-size: 16px;
+            width: 180px ;
+            height: 45px;
+            border-radius: 20px;
+            border: solid 1px ;
+            background-color: transparent;
+            color: #ff4242;
+            font-weight: 800;
+            margin-bottom: 40px;
+            margin-top: 40px;
+
+        }
+        .product img {
+            max-width:400px;
+            width: 100%;
+            height: 100%;
+        }
+        footer 
+        {
+            height: 40vh;
+            background:#000000;
+        }
+        footer ul li img {
+            max-width: 40px;
+        }
+        footer ul li {
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">About</a></li>
+                <li style="color: #888;">Products<a href=""></a></li>
+                <li><a href="#more">More</a></li>
+            </ul>
+        </nav>
+       
+        <h1>products </h1>
+        <p>the fashion hub</p>
+        <div class="img">
+        </div>
+    </header>
+    <div class="products">
+        <div class="product">
+            <h1>productname</h1>
+            <img src="bb.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="llh.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="tb.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="gre1.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="capuche.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="blue.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="bh.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="grh.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="ph.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+        <div class="product">
+            <h1>productname</h1>
+            <img src="oh.png" alt="">
+            <button class="price">price: 20$</button>
+        </div>
+    </div>
+    <h1 style="font-size: 35px;">More:</h1>
+    <footer style="padding-top: 10px ; padding-left: 10px;" id="more">
+        <h4 style="color: rgb(225, 225, 225); font-size: 25px; font-weight: 700;margin-top: 40px;">contact:</h4>
+        <ul style="color: white;margin-top: -10px;list-style-type: none;">
+            <li>
+                <img src="fb.webp" alt="">
+                facebook</li>
+            <li>
+                <img src="ig.webp" alt="">
+                instagram</li>
+            <li>
+                <img src="wt.png" alt="">
+                +216 20 200 200</li>
+            <li>
+                <img src="gg.png" alt="">
+                company@com.com</li>
+        </ul>
+    </footer>
+</body>
+</html>

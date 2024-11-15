@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Hub</title>
+    <style> 
+    @media screen and (min-width: 500px) {
+        #clothes {
+            transform: translate(0%, -200px);
+        }
+        .fashion {
+            opacity: 0;
+        }
+    }
+    html {
+        overflow-x: hidden;
+    }
+        body {
+            padding: 0;
+            max-width: 1000px;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            width: 100%;
+            border-top: none;
+            margin: 0 auto;
+        }
+        header {
+            color: rgb(0, 0, 0);
+            height: 100vh;
+            background-image: url(baaack.webp);
+            margin: 0;
+            overflow: hidden;
+            border-bottom: solid 4px #000000;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            padding: 10px 0;
+        }
+        nav ul {
+            display: flex;
+            width: 100%;
+            transform: translateX(-50px);
+            justify-content: space-evenly;
+        }
+        nav ul li {
+            list-style: none;
+            font-weight: 750;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(255, 255, 255);
+            position: relative;        
+        }
+        nav ul li::after {
+            position: absolute;
+            content: "";
+            width: 70%; 
+            background-color: #ffffff;
+            height: 4px;
+            top: 100%;
+            left: 0;
+            transition: all .4;
+            border-radius: 20px;
+        }
+        .product img, .product-scrol img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+        header h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-family: cursive;
+            animation: came2 1s;
+            font-size: 55px;
+            font-weight: 750;
+        }
+        @keyframes came2 {
+            from {
+                transform: translate(-120%);
+                opacity: .1;
+            }
+            to {
+                transform: translate(0);
+                opacity: 1;
+            }
+            
+        }
+        header p {
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 900;
+            color: gray;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .img {
+            width: 100%;
+            margin: 200px  auto;
+            text-align: center;
+        }
+        #clothes {
+            max-width: 500px;
+            width: 150%;
+            transform: translate(10%, -200px);
+            z-index: -99;
+          animation: came 1s; 
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        @keyframes came {
+            from {
+                opacity: .1;
+                transform: translate(100%, -200px);
+            }
+            to {
+                transform: translate(10%, -200px);
+            }
+        }
+        .img p {
+            width: 40%;
+            height: 100%;
+            margin: auto;
+            font-size: 40px;
+            color: black;
+            z-index: 1;
+            transform: translate(0, -50px);
+            text-align: center;
+        }
+        .produc-scrol {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: 600px  auto 100px auto ;
+            scroll-snap-type: x mandatory;
+        }
+        .product-scrol {
+            flex-direction: 0 0 auto;
+            width: 100%;
+            scroll-snap-align: start;
+        }
+        .products {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;
+            overflow-x: hidden;
+        }
+        .product {
+            border: none;
+            width: 100%;
+            border-radius: 10px;
+            background: transparent ;
+            max-width: 500px;
+            margin: 50px auto;
+            height: auto;
+            text-align: center;
+        }
+        .product img {
+            margin: auto;
+            max-height: 100%;
+            max-width: 500px;
+            width: 100%;
+        }
+         .price {
+            display: flex;
+            width: 50%;
+            margin: auto;
+            text-align: end;
+            justify-content: space-evenly;
+        }
+        .price .pp {
+            font-size: 20px;
+            color: #13b613;
+            font-weight: 900;
+        }
+        .price .op {
+            color: #dc3545;
+            text-decoration: line-through;
+            margin-top: 22px;
+            display: none;
+        }
+        .product h2 {
+            color: rgb(255, 255, 255);
+            font-family: cursive;
+        }
+        main {
+            margin-top: 500px;
+        }
+        .About h3 {
+            text-align: center;
+            color: #13b613;
+            font-size: 30px;
+            font-family: cursive;
+        }
+        #t {
+            max-width: 100px;
+            transform: translate(0px, 10px);
+            z-index: -1;
+        }
+        .ads {
+            font-size: 45px;
+            text-align: center;
+            margin-top: -500px;
+            font-family: cursive;
+            color: rgb(251, 251, 251);
+            transform: translate(0, 100px);
+
+        }
+        .texts {
+            background-color: #000000;
+            height: 80vh;
+        }
+        button {
+            width: 200px;
+            height: 45px;
+            margin-top: 40px;
+            border: none;
+            background-color: #000000;
+            color: white;
+            font-weight: 800;
+            font-size: 17px;
+            border-radius: 4px;
+        }
+        .fashion span {
+            color: #a1f;
+        }
+        .go-products {
+            margin-top: 400px;
+            border: solid 1px  black;
+            width: 100%;
+            background-color: #000000;
+            max-width: 500px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 100px;
+        }
+        .go-products h2 {
+            font-size: 35px;
+            color: rgb(172, 172, 172);
+            font-family: cursive;
+            text-align: center;
+           
+        }
+        #bat {
+            background-color: rgb(247, 247, 247);
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 600;
+            color: black;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 100px;
+        }
+        footer 
+        {
+            height: 40vh;
+            background:#000000;
+        }
+        footer ul li img {
+            max-width: 40px;
+        }
+        footer ul li {
+            display: flex;
+            align-items: center;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html" style="color: #888;">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#more">More</a></li>
+                </ul>
+            </nav>
+           
+            <h1>welcome</h1>
+            <p>the fashion hub</p>
+            <div class="img">
+                <img src="men.png" alt="" id="clothes">
+            </div>
+        </header>
+        <main>
+            <div class="texts" id="">
+                <h1 class="ads">new <br> collection <br> every  <br> week!</h1>
+            </div>
+            <div class="products">
+                <div class="product">
+                    <h2>product1 name</h2>
+                    <img src="gre1.png" alt=""><button>more </button>             
+                </div>
+                <div class="product">
+                    <h2>product2 name</h2>
+                    <img src="blue.png" alt="">
+  
+                    <button>more </button>
+                </div>
+                <div class="product">
+                    <h2>product3 name</h2>
+                    <img src="capuche.png" alt="">
+                    <button>more </button>
+                   
+                </div>
+                <div class="product">
+                    <h2>product4 name</h2>
+                    <img src="tb.png" alt="">
+    
+                    <button>more </button>
+                </div>
+                <div class="product">
+                    <h2>product5 name</h2>
+                    <img src="bb.png" alt="">
+                 <button>more </button>          
+                </div>
+                <div class="texts" style="transform: translate(0, 00px); height: 400px;">
+                    <h1 style="transform: translate(0, 600px);" class="ads"> with <br> best <br> prices</h1>
+                </div>
+            </div>
+            <div class="fashion af" style="display: flex; margin-top: 400px;">
+                <h3 style="font-size: 40px; margin: 80px -50px 0px 10px;text-transform: uppercase; ">your <br> <span>look</span> <br> is <br>our <br> <span>work</span></h3>
+                <img src="women.png" alt="" style=" margin-right: auto; text-align: center; width: 400px;">
+            </div>
+            <div class="fashion ap " style="display: flex; margin-top: 400px;">
+                <img src="men12.png" alt="" style=" margin-left: -150px; text-align: center; width: 400px;">
+                <h3 style="font-size: 40px; margin: 10px 00px 0px -80px;text-transform: uppercase; ">so <br>dont't <br> care <br>about <br> <span>fashion</span><br> with <br> us</h3>
+            </div>
+            <div class="go-products">
+                <h2>go to our products :</h2>
+                <button id="bat" onclick="window.location.href = 'products.html' ">click here !</button>
+               
+            </div>
+        </main>
+        <h1 style="font-size: 35px;">More:</h1>
+        <footer style="padding-top: 10px ; padding-left: 10px;" id="more">
+            <h4 style="color: rgb(225, 225, 225); font-size: 25px; font-weight: 700;margin-top: 40px;">contact:</h4>
+            <ul style="color: white;margin-top: -10px;list-style-type: none;">
+                <li>
+                    <img src="fb.webp" alt="">
+                    facebook</li>
+                <li>
+                    <img src="ig.webp" alt="">
+                    instagram</li>
+                <li>
+                    <img src="wt.png" alt="">
+                    +216 20 200 200</li>
+                <li>
+                    <img src="gg.png" alt="">
+                    company@com.com</li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
